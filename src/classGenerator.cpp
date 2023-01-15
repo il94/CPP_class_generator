@@ -12,7 +12,7 @@ void	printHelp( void )
 	cout << "	--help\t\t\tshow this message" << endl;
 }
 
-void	generateClasses(vector <string> classes, Flags flags)
+void	classGenerator(vector <string> classes, Flags flags)
 {
 	string	name;
 

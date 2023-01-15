@@ -70,9 +70,11 @@ void	generateHeaderFile(ofstream &headerStream, string &src, Flags &flags)
 
 	headerStream <<	"};\n\n";
 
-	headerStream <<	"std::ostream&	operator<<(std::ostream &flow, " + src + " const &value);\n";
 	if (flags.getStreamOverload())
+	{
+		headerStream <<	"std::ostream&	operator<<(std::ostream &flow, " + src + " const &value);\n";
 		headerStream <<	"std::istream&	operator>>(std::istream &flow, " + src + " const &value);\n";
-	headerStream <<	"\n";
+		headerStream <<	"\n";
+	}
 	headerStream <<	"#endif";
 }

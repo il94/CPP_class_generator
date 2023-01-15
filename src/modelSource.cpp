@@ -68,6 +68,10 @@ void	generateSourceFile(ofstream &sourceStream, string &src, Flags &flags)
 		sourceStream <<	src + "	" + src + "::operator/(const " + src + " &factor) const\n";
 		sourceStream <<	"{\n";
 		sourceStream <<	"}\n\n";
+
+		sourceStream <<	src + "	" + src + "::operator%(const " + src + " &factor) const\n";
+		sourceStream <<	"{\n";
+		sourceStream <<	"}\n\n";
 	}
 
 	if (flags.getAssignOverload())
@@ -114,16 +118,16 @@ void	generateSourceFile(ofstream &sourceStream, string &src, Flags &flags)
 		sourceStream <<	"/*================================= Methods ==================================*/\n\n\n\n";
 
 	if (flags.getMenu())
-		sourceStream <<	"/*================================ Accessors =================================*/\n\n\n\n";
-
-	sourceStream <<	"std::ostream&	operator<<(std::ostream &flow, " + src + " const &value)\n";
-	sourceStream <<	"{\n";
-	sourceStream <<	"}\n\n";
+		sourceStream <<	"/*================================ Accessors =================================*/\n\n\n";
 
 	if (flags.getStreamOverload())
 	{
+		sourceStream <<	"\n\n";
+		sourceStream <<	"std::ostream&	operator<<(std::ostream &flow, " + src + " const &value)\n";
+		sourceStream <<	"{\n";
+		sourceStream <<	"}\n\n";
 		sourceStream <<	"std::istream&	operator>>(std::istream &flow, " + src + " const &value)\n";
 		sourceStream <<	"{\n";
-		sourceStream <<	"}";
+		sourceStream <<	"}\n";
 	}
 }

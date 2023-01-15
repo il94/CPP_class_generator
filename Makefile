@@ -35,7 +35,7 @@ OBJ_DIR = obj/
 #==============================================================================#
 
 SRC = main.cpp parsing.cpp utils.cpp Flags.cpp \
-		classGenerator.cpp sourceGenerator.cpp headerGenerator.cpp
+		classGenerator.cpp modelSource.cpp modelHeader.cpp
 
 #==============================================================================#
 #                                   HEADERS                                    #

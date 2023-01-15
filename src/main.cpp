@@ -11,6 +11,6 @@ int	main(int ac, char **av)
 	if (flags.helpMode())
 		printHelp();
 	else
-		generateClasses(getClassesNames(parameters), flags);
+		classGenerator(getClassesNames(parameters), flags);
 	return (0);
 }

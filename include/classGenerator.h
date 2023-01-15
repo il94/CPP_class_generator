@@ -22,7 +22,7 @@ void			generateHeaderFile(ofstream &headerStream, string &src, Flags &flags);
 
 /* classGenerator.cpp */
 void			printHelp( void );
-void			generateClasses(vector <string> classes, Flags flags);
+void			classGenerator(vector <string> classes, Flags flags);
 
 /* parsing.cpp */
 int				isValidParameters(vector<string> parameters);

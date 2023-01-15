@@ -1,5 +1,7 @@
 #include "../include/classGenerator.h"
 
+/*=============================== Constructors ===============================*/
+
 Flags::Flags(vector<string> parameters) : _compare(false),
 											_arithmetic(false),
 											_assign(false),
@@ -25,7 +27,3 @@ Flags::Flags(vector<string> parameters) : _compare(false),
 
 Flags::Flags() : _compare(false), _arithmetic(false), _assign(false),
 				_stream(false), _noMenu(false), _help(false) {}
-
-Flags::~Flags(){
-}
-

@@ -5,11 +5,12 @@ using namespace std;
 
 class Flags
 {
-	public:
+	public :
 
+	/* Constructors */
 	Flags(vector<string> parameters);
-	~Flags();
 
+	/* Methods */
 	bool	getCompareOverload( void ) { return _compare; }
 	bool	getArithmeticOverload( void ) { return _arithmetic; }
 	bool	getAssignOverload( void ) { return _assign; }
@@ -17,10 +18,11 @@ class Flags
 	bool	getMenu( void ) { return not _noMenu; }
 	bool	helpMode( void ) { return _help; }
 
-	private:
+	private :
 
 	Flags();
 
+	/* Attributes */
 	bool	_compare;
 	bool	_arithmetic;
 	bool	_assign;
