@@ -4,11 +4,11 @@ void	printHelp( void )
 {
 	cout << "Usage : ./generator [--options] [classe names] (in any order)" << endl;
 	cout << "Options list :" << endl;
-	cout << "	--compare\t\tobtain comparison operators" << endl;
-	cout << "	--arithmetic\t\tobtain arithmetic operators" << endl;
-	cout << "	--assign\t\tobtain assignation operators" << endl;
-	cout << "	--stream\t\tobtain stream operators" << endl;
-	cout << "	--no-menu\t\tget class files without heading" << endl;
+	cout << "	--compare\t\tget comparison operators" << endl;
+	cout << "	--arithmetic\t\tget arithmetic operators" << endl;
+	cout << "	--assign\t\tget assignation operators" << endl;
+	cout << "	--stream\t\tget stream operators" << endl;
+	cout << "	--no-titles\t\tget class files without titles" << endl;
 	cout << "	--help\t\t\tshow this message" << endl;
 }
 

@@ -6,7 +6,7 @@ Flags::Flags(vector<string> parameters) : _compare(false),
 											_arithmetic(false),
 											_assign(false),
 											_stream(false), 
-											_noMenu(false),
+											_noTitles(false),
 											_help(false) {
 	for (int i = 0; i < parameters.size(); i++)
 	{
@@ -18,12 +18,12 @@ Flags::Flags(vector<string> parameters) : _compare(false),
 			_assign = true;
 		else if (parameters[i] == "--stream")
 			_stream = true;
-		else if (parameters[i] == "--no-menu")
-			_noMenu = true;
+		else if (parameters[i] == "--no-titles")
+			_noTitles = true;
 		else if (parameters[i] == "--help")
 			_help = true;
 	}
 }
 
 Flags::Flags() : _compare(false), _arithmetic(false), _assign(false),
-				_stream(false), _noMenu(false), _help(false) {}
+				_stream(false), _noTitles(false), _help(false) {}

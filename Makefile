@@ -2,7 +2,7 @@
 #                                   TARGETS                                    #
 #==============================================================================#
 
-NAME = class_generator
+NAME = ../class_generator
 
 #==============================================================================#
 #                                   COMMANDS                                   #
@@ -57,8 +57,8 @@ all : $(OBJ_DIR) $(NAME)
 
 $(NAME) : $(OBJ)
 	echo "$(YELLOW)Making Class Generator$(END)"
-	$(CXX) $(OBJ) -o ../$(NAME)
-	echo "$(GREEN)Done$(END)"
+	$(CXX) $(OBJ) -o $(NAME)
+	echo "$(GREEN)Done. Class Generator is in the parent directory$(END)"
 
 $(OBJ_DIR)%.o : $(SRC_DIR)%.cpp $(HEAD) Makefile
 	$(CXX) -c $< -o $@

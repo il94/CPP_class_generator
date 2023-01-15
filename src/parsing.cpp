@@ -10,7 +10,7 @@ static int	isValidFlags(vector <string> &parameters)
 				parameters[i].find("arithmetic", 2) == -1 and
 				parameters[i].find("assign", 2) == -1 and
 				parameters[i].find("stream", 2) == -1 and
-				parameters[i].find("no-menu", 2) == -1 and
+				parameters[i].find("no-titles", 2) == -1 and
 				parameters[i].find("help", 2) == -1)
 			{
 				cout << "Option " << parameters[i] << " not found" << endl;
@@ -25,7 +25,7 @@ static int	isClassName(vector <string> &parameters)
 {
 	for (int i = 0; i < parameters.size(); i++)
 	{
-		if (parameters[i].find("--", 0) == -1)
+		if (parameters[i].find("--", 0) == -1 or parameters[i] == "--help")
 			return (1);
 	}
 	cout << "Please enter a class name" << endl;

@@ -4,7 +4,7 @@ void	generateSourceFile(ofstream &sourceStream, string &src, Flags &flags)
 {
 	sourceStream <<	"#include \"" + src + ".hpp\"\n\n";
 
-	if (flags.getMenu())
+	if (flags.getTitles())
 		sourceStream <<	"/*=============================== Constructors ===============================*/\n\n";
 
 	sourceStream <<	src + "::" + src + "(){\n";
@@ -17,7 +17,7 @@ void	generateSourceFile(ofstream &sourceStream, string &src, Flags &flags)
 	sourceStream <<	src + "::~" + src + "(){\n";
 	sourceStream <<	"}\n\n";
 
-	if (flags.getMenu())
+	if (flags.getTitles())
 		sourceStream <<	"/*================================ Overloads =================================*/\n\n";
 
 	sourceStream <<	src + "& " + src + "::operator=(const " + src + " &src)\n";
@@ -114,10 +114,10 @@ void	generateSourceFile(ofstream &sourceStream, string &src, Flags &flags)
 		sourceStream <<	"}\n\n";
 	}
 
-	if (flags.getMenu())
+	if (flags.getTitles())
 		sourceStream <<	"/*================================= Methods ==================================*/\n\n\n\n";
 
-	if (flags.getMenu())
+	if (flags.getTitles())
 		sourceStream <<	"/*================================ Accessors =================================*/\n\n\n";
 
 	if (flags.getStreamOverload())

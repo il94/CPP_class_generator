@@ -15,7 +15,7 @@ class Flags
 	bool	getArithmeticOverload( void ) { return _arithmetic; }
 	bool	getAssignOverload( void ) { return _assign; }
 	bool	getStreamOverload( void ) { return _stream; }
-	bool	getMenu( void ) { return not _noMenu; }
+	bool	getTitles( void ) { return not _noTitles; }
 	bool	helpMode( void ) { return _help; }
 
 	private :
@@ -27,7 +27,7 @@ class Flags
 	bool	_arithmetic;
 	bool	_assign;
 	bool	_stream;
-	bool	_noMenu;
+	bool	_noTitles;
 	bool	_help;
 };
 

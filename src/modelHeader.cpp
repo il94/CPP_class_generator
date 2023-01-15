@@ -11,13 +11,13 @@ void	generateHeaderFile(ofstream &headerStream, string &src, Flags &flags)
 	headerStream <<	"{\n";
 	headerStream <<	"	public :\n\n";
 		
-	if (flags.getMenu())
+	if (flags.getTitles())
 		headerStream <<	"	/* Constructors */\n";
 	headerStream <<	"	" + src + "();\n";
 	headerStream <<	"	" + src + "(const " + src + "&);\n";
 	headerStream <<	"	~" + src + "();\n\n";
 
-	if (flags.getMenu())
+	if (flags.getTitles())
 		headerStream <<	"	/* Overloads */\n";
 	headerStream <<	"	" + src + "&	operator=(const " + src + "&);\n\n";
 
@@ -54,7 +54,7 @@ void	generateHeaderFile(ofstream &headerStream, string &src, Flags &flags)
 		headerStream <<	"	" + src + "	operator--( int );\n\n";
 	}
 
-	if (flags.getMenu())
+	if (flags.getTitles())
 	{
 		headerStream <<	"	/* Methods */\n	\n\n";
 
@@ -63,7 +63,7 @@ void	generateHeaderFile(ofstream &headerStream, string &src, Flags &flags)
 
 	headerStream <<	"	private :\n\n";
 
-	if (flags.getMenu())
+	if (flags.getTitles())
 	{
 		headerStream <<	"	/* Attributes */\n	\n\n";
 	}
