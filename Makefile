@@ -57,7 +57,7 @@ all : $(OBJ_DIR) $(NAME)
 
 $(NAME) : $(OBJ)
 	echo "$(YELLOW)Making Class Generator$(END)"
-	$(CXX) $(OBJ) -o $(NAME)
+	$(CXX) $(OBJ) -o ../$(NAME)
 	echo "$(GREEN)Done$(END)"
 
 $(OBJ_DIR)%.o : $(SRC_DIR)%.cpp $(HEAD) Makefile
